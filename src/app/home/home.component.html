@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="container w-25 st-1">
+    <h6 class="mt-5">Enter your Details below:</h6>&nbsp;&nbsp;
+    <form #myForm="ngForm" (ngSubmit)="captureForm">
+  <!-- Name -->
+ 
+       <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input (keyup)='captureForm($event)' name="names" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     </div> 
+  <!-- email -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input (keyup)='captureForm($event)' name="email"  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div><p>Enter a valid Email Id</p></div>
+  </div>
+  <!-- Phone -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+    <input  (keyup)='captureForm($event)' name="phone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+  <!-- Professional Summary -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Professional Summary</label>
+    <input  (keyup)='captureForm($event)' name="summary" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <!-- Work Experience -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Work Experience</label>
+    <input  (keyup)='captureForm($event)' name="experience" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+   <!-- Education -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Education Deails</label>
+    <input  (keyup)='captureForm($event)' name="education" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <!-- Skills-->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Skills</label>
+    <input  (keyup)='captureForm($event)' name="skills" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<app-result></app-result>

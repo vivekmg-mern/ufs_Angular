@@ -1,0 +1,24 @@
+<div class="container">
+    <!-- Button to get Data from Backend -->
+   <div class="d-flex justify-content-center mt-5"><h4>Click the button to see the CV below: <button (click)="getCvData1()" class="btn btn-primary">Click</button></h4></div> 
+
+   <!-- List of Data -->
+<div>
+    {{cvData.names}}
+    <ul class="cl-1">
+        @for (item of cvData; track $index) {
+    <li><h5>Curriculum Vitae</h5></li>
+    <li>Name: {{item.names}} </li>
+    <li>Email: {{item.email}} </li>
+    <li>Phone: {{item.summary}} </li>
+    <li>Professional Summary: {{item.experience}} </li>
+    <li>Education: {{item.education}} </li>
+    <li>Skills: {{item.skills}} </li> &nbsp;&nbsp;&nbsp;
+        }
+  
+    </ul>
+    
+</div>
+
+
+</div>
